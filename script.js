@@ -16,16 +16,16 @@ const PRODUCTS = [
     id: 'stream-netflix-premium',
     category: 'streaming',
     name: 'Netflix Premium',
-    price: 200.00,
-    stock: 5,
+    price: 275.00,
+    stock: Disponible,
     image: '' // ej: 'img/netflix.jpg'
   },
   {
-    id: 'stream-prime-6m',
+    id: 'stream-prime video-1m',
     category: 'streaming',
     name: 'Prime 6M',
-    price: 80.00,
-    stock: 12,
+    price: 75.00,
+    stock: 0,
     image: ''
   },
   {
@@ -33,22 +33,22 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'Spotify Premium 1M',
     price: 50.00,
-    stock: 8,
+    stock: 0,
     image: ''
   },
   {
     id: 'stream-disney-1m',
     category: 'streaming',
     name: 'Disney+ 1M',
-    price: 90.00,
-    stock: 4,
+    price: 75.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'stream-hbo-1m',
     category: 'streaming',
     name: 'HBO Max 1M',
-    price: 70.00,
+    price: 75.00,
     stock: 6,
     image: ''
   },
@@ -56,8 +56,8 @@ const PRODUCTS = [
     id: 'stream-paramount-1m',
     category: 'streaming',
     name: 'Paramount+ 1M',
-    price: 45.00,
-    stock: 9,
+    price: 35.00,
+    stock: 0,
     image: ''
   },
   {
@@ -65,7 +65,7 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'Vix Premium 1M',
     price: 40.00,
-    stock: 7,
+    stock: Disponible,
     image: ''
   },
   {
@@ -73,7 +73,7 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'YouTube Premium 1M',
     price: 60.00,
-    stock: 3,
+    stock: 0,
     image: ''
   },
 
@@ -81,65 +81,65 @@ const PRODUCTS = [
   {
     id: 'ff-100',
     category: 'freefire',
-    name: '100 Diamantes',
-    price: 25.00,
-    stock: 99,
+    name: '110 Diamantes',
+    price: 16.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'ff-310',
     category: 'freefire',
-    name: '310 Diamantes',
-    price: 70.00,
-    stock: 99,
+    name: '341 Diamantes',
+    price: 45.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'ff-520',
     category: 'freefire',
-    name: '520 Diamantes',
-    price: 115.00,
-    stock: 99,
+    name: '572 Diamantes',
+    price: 80.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'ff-1060',
     category: 'freefire',
-    name: '1060 Diamantes',
-    price: 220.00,
-    stock: 99,
+    name: '1116 Diamantes',
+    price: 155.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'ff-2180',
     category: 'freefire',
-    name: '2180 Diamantes',
-    price: 440.00,
-    stock: 99,
+    name: '2398 Diamantes',
+    price: 280.00,
+    stock: Disponible,
     image: ''
   },
   {
-    id: 'ff-5600',
+    id: 'ff-6168',
     category: 'freefire',
-    name: '5600 Diamantes',
-    price: 1100.00,
-    stock: 99,
+    name: '6168 Diamantes',
+    price: 650.00,
+    stock: Disponible,
     image: ''
   },
   {
     id: 'ff-pase-mensual',
     category: 'freefire',
-    name: 'Pase Mensual',
-    price: 95.00,
-    stock: 99,
+    name: 'Tarjeta Mensual',
+    price: 0.00,
+    stock: 0,
     image: ''
   },
   {
     id: 'ff-tarjeta-semanal',
     category: 'freefire',
     name: 'Tarjeta Semanal',
-    price: 35.00,
-    stock: 99,
+    price: 0.00,
+    stock: 0,
     image: ''
   },
 
