@@ -17,7 +17,7 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'Netflix Premium',
     price: 275.00,
-    stock: Disponible,
+    stock: 99,
     image: '' // ej: 'img/netflix.jpg'
   },
   {
@@ -41,7 +41,7 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'Disney+ 1M',
     price: 75.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -65,7 +65,7 @@ const PRODUCTS = [
     category: 'streaming',
     name: 'Vix Premium 1M',
     price: 40.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -83,7 +83,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '110 Diamantes',
     price: 16.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -91,7 +91,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '341 Diamantes',
     price: 45.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -99,7 +99,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '572 Diamantes',
     price: 80.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -107,7 +107,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '1116 Diamantes',
     price: 155.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -115,7 +115,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '2398 Diamantes',
     price: 280.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -123,7 +123,7 @@ const PRODUCTS = [
     category: 'freefire',
     name: '6168 Diamantes',
     price: 650.00,
-    stock: Disponible,
+    stock: 99,
     image: ''
   },
   {
@@ -141,13 +141,7 @@ const PRODUCTS = [
     price: 0.00,
     stock: 0,
     image: ''
-  },
-
-  /* ===== JUEGOS (vacío por ahora) =====
-     Para agregar más adelante, crea objetos con category: 'juegos'.
-     Ejemplo:
-     { id: 'game-cod', category: 'juegos', name: 'Call of Duty', price: 350, stock: 2, image: '' }
-  */
+  }
 ];
 
 /* ---------- Estado ---------- */
@@ -230,6 +224,7 @@ function refreshCardActions() {
   });
   if (window.lucide) window.lucide.createIcons();
 }
+
 function renderProducts() {
   const items = PRODUCTS.filter((p) => p.category === activeCategory);
 
@@ -283,7 +278,7 @@ function renderProducts() {
   if (window.lucide) window.lucide.createIcons();
 }
 
-/* Delegación de eventos: sobrevive al re-render de las acciones */
+/* Delegación de eventos */
 grid.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-card-action]');
   if (!btn) return;
@@ -301,7 +296,6 @@ function setCategory(cat) {
     t.classList.toggle('is-active', t.dataset.category === cat);
   });
   renderProducts();
-  // Scroll suave al inicio del catálogo
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -359,14 +353,11 @@ function cartCount() {
 
 /* ---------- Actualización de UI ---------- */
 function updateCartUI() {
-  // Sincronizar acciones de tarjetas con estado del carrito
   refreshCardActions();
 
-  // Contador FAB
   const count = cartCount();
   fabCount.textContent = count;
 
-  // Render lista
   if (cart.size === 0) {
     cartList.innerHTML = '';
     cartEmpty.hidden = false;
@@ -411,15 +402,12 @@ function updateCartUI() {
   });
 
   cartTotalEl.textContent = formatPrice(cartTotal());
-
   if (window.lucide) window.lucide.createIcons();
 }
 
 /* ---------- Animación FAB ---------- */
 function bumpFab() {
   fabCount.classList.remove('bump');
-  // forzar reflow para reiniciar animación
-  // eslint-disable-next-line no-unused-expressions
   void fabCount.offsetWidth;
   fabCount.classList.add('bump');
   setTimeout(() => fabCount.classList.remove('bump'), 260);
@@ -485,9 +473,7 @@ function sendToWhatsapp() {
   }
   const text = encodeURIComponent(buildWhatsappMessage());
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
-  // Abrir WhatsApp
   window.open(url, '_blank', 'noopener,noreferrer');
-  // Reiniciar carrito tras el envío (como pidió el cliente)
   clearCart();
   closeCart();
   showToast('Enviado a WhatsApp');
