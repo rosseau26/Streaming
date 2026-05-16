@@ -7,9 +7,7 @@
 const WHATSAPP_NUMBER = '524779231683'; // Sin signos, con código de país
 const CURRENCY = '$';
 
-/* ---------- Catálogo Demo ----------
-   Reemplaza `image` por la ruta/URL de tus imágenes.
-   Reemplaza `price` y `stock` según tu inventario. */
+/* ---------- Catálogo Real con Imágenes ---------- */
 const PRODUCTS = [
   /* ===== STREAMING ===== */
   {
@@ -18,7 +16,7 @@ const PRODUCTS = [
     name: 'Netflix Premium',
     price: 275.00,
     stock: 99,
-    image: '' // ej: 'img/netflix.jpg'
+    image: 'https://images.ctfassets.net/4cd45et68cgf/4nEB8vY3FaMkxE3SYX5vJU/91bac46b571243445d8005030227eedf/neflix_logo.png' 
   },
   {
     id: 'stream-prime video-1m',
@@ -26,7 +24,7 @@ const PRODUCTS = [
     name: 'Prime 6M',
     price: 75.00,
     stock: 0,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/2560px-Amazon_Prime_Video_logo.svg.png'
   },
   {
     id: 'stream-spotify-1m',
@@ -34,7 +32,7 @@ const PRODUCTS = [
     name: 'Spotify Premium 1M',
     price: 50.00,
     stock: 0,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png'
   },
   {
     id: 'stream-disney-1m',
@@ -42,7 +40,7 @@ const PRODUCTS = [
     name: 'Disney+ 1M',
     price: 75.00,
     stock: 99,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png'
   },
   {
     id: 'stream-hbo-1m',
@@ -50,7 +48,7 @@ const PRODUCTS = [
     name: 'HBO Max 1M',
     price: 75.00,
     stock: 6,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/1200px-Max_logo.svg.png'
   },
   {
     id: 'stream-paramount-1m',
@@ -58,7 +56,7 @@ const PRODUCTS = [
     name: 'Paramount+ 1M',
     price: 35.00,
     stock: 0,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Paramount%2B_logo.svg/2560px-Paramount%2B_logo.svg.png'
   },
   {
     id: 'stream-vix-1m',
@@ -66,7 +64,7 @@ const PRODUCTS = [
     name: 'Vix Premium 1M',
     price: 40.00,
     stock: 99,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ViX_logo.svg/1200px-ViX_logo.svg.png'
   },
   {
     id: 'stream-youtube-1m',
@@ -74,7 +72,7 @@ const PRODUCTS = [
     name: 'YouTube Premium 1M',
     price: 60.00,
     stock: 0,
-    image: ''
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/YouTube_Premium_logo.svg/1280px-YouTube_Premium_logo.svg.png'
   },
 
   /* ===== FREE FIRE ===== */
@@ -84,7 +82,7 @@ const PRODUCTS = [
     name: '110 Diamantes',
     price: 16.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-310',
@@ -92,7 +90,7 @@ const PRODUCTS = [
     name: '341 Diamantes',
     price: 45.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-520',
@@ -100,7 +98,7 @@ const PRODUCTS = [
     name: '572 Diamantes',
     price: 80.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-1060',
@@ -108,7 +106,7 @@ const PRODUCTS = [
     name: '1116 Diamantes',
     price: 155.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-2180',
@@ -116,7 +114,7 @@ const PRODUCTS = [
     name: '2398 Diamantes',
     price: 280.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-6168',
@@ -124,7 +122,7 @@ const PRODUCTS = [
     name: '6168 Diamantes',
     price: 650.00,
     stock: 99,
-    image: ''
+    image: 'https://garena.com/garena_cms/image/e8fc0cf02d2da079f2fe7b973e4da664.png'
   },
   {
     id: 'ff-pase-mensual',
@@ -132,7 +130,7 @@ const PRODUCTS = [
     name: 'Tarjeta Mensual',
     price: 0.00,
     stock: 0,
-    image: ''
+    image: 'https://img.icons8.com/fluency/48/000000/membership-card.png'
   },
   {
     id: 'ff-tarjeta-semanal',
@@ -140,7 +138,7 @@ const PRODUCTS = [
     name: 'Tarjeta Semanal',
     price: 0.00,
     stock: 0,
-    image: ''
+    image: 'https://img.icons8.com/fluency/48/000000/calendar.png'
   }
 ];
 
@@ -185,7 +183,7 @@ const categoryMeta = {
   }
 };
 
-/* ---------- Acciones de la Tarjeta (botón / control de cantidad) ---------- */
+/* ---------- Acciones de la Tarjeta ---------- */
 function cardActionMarkup(p) {
   const inCart = cart.get(p.id);
   if (inCart && inCart.qty > 0) {
@@ -228,12 +226,10 @@ function refreshCardActions() {
 function renderProducts() {
   const items = PRODUCTS.filter((p) => p.category === activeCategory);
 
-  // Texto de cabecera
   const meta = categoryMeta[activeCategory];
   catalogTitle.textContent = meta.title;
   catalogSub.textContent = meta.sub;
 
-  // Estado vacío
   if (items.length === 0) {
     grid.hidden = true;
     grid.innerHTML = '';
@@ -245,7 +241,6 @@ function renderProducts() {
   grid.hidden = false;
   emptyState.hidden = true;
 
-  // Construcción del HTML
   grid.innerHTML = items
     .map((p, i) => {
       const stockLabel =
@@ -278,7 +273,6 @@ function renderProducts() {
   if (window.lucide) window.lucide.createIcons();
 }
 
-/* Delegación de eventos */
 grid.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-card-action]');
   if (!btn) return;
@@ -289,7 +283,6 @@ grid.addEventListener('click', (e) => {
   else if (action === 'dec') decrementItem(id);
 });
 
-/* ---------- Cambio de Categoría ---------- */
 function setCategory(cat) {
   activeCategory = cat;
   tabs.forEach((t) => {
@@ -303,7 +296,6 @@ tabs.forEach((tab) => {
   tab.addEventListener('click', () => setCategory(tab.dataset.category));
 });
 
-/* ---------- Carrito ---------- */
 function addToCart(id) {
   const product = PRODUCTS.find((p) => p.id === id);
   if (!product) return;
@@ -326,12 +318,6 @@ function decrementItem(id) {
   updateCartUI();
 }
 
-function incrementItem(id) {
-  if (!cart.has(id)) return;
-  cart.get(id).qty += 1;
-  updateCartUI();
-}
-
 function clearCart() {
   cart.clear();
   updateCartUI();
@@ -351,7 +337,6 @@ function cartCount() {
   return n;
 }
 
-/* ---------- Actualización de UI ---------- */
 function updateCartUI() {
   refreshCardActions();
 
@@ -396,7 +381,11 @@ function updateCartUI() {
     `;
 
     li.querySelector('[data-action="dec"]').addEventListener('click', () => decrementItem(id));
-    li.querySelector('[data-action="inc"]').addEventListener('click', () => incrementItem(id));
+    li.querySelector('[data-action="inc"]').addEventListener('click', () => {
+      if (!cart.has(id)) return;
+      cart.get(id).qty += 1;
+      updateCartUI();
+    });
 
     cartList.appendChild(li);
   });
@@ -405,7 +394,6 @@ function updateCartUI() {
   if (window.lucide) window.lucide.createIcons();
 }
 
-/* ---------- Animación FAB ---------- */
 function bumpFab() {
   fabCount.classList.remove('bump');
   void fabCount.offsetWidth;
@@ -413,7 +401,6 @@ function bumpFab() {
   setTimeout(() => fabCount.classList.remove('bump'), 260);
 }
 
-/* ---------- Toast ---------- */
 let toastTimer = null;
 function showToast(msg) {
   let el = document.querySelector('.toast');
@@ -429,7 +416,6 @@ function showToast(msg) {
   toastTimer = setTimeout(() => el.classList.remove('is-visible'), 1800);
 }
 
-/* ---------- Modal ---------- */
 function openCart() {
   cartModal.hidden = false;
   cartModal.setAttribute('aria-hidden', 'false');
@@ -455,7 +441,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && !cartModal.hidden) closeCart();
 });
 
-/* ---------- Envío por WhatsApp ---------- */
 function buildWhatsappMessage() {
   let msg = 'Hola, me interesa realizar una cotización de los siguientes productos:\n';
   cart.forEach(({ product, qty }) => {
@@ -481,7 +466,6 @@ function sendToWhatsapp() {
 
 sendWhatsappBtn.addEventListener('click', sendToWhatsapp);
 
-/* ---------- Inicialización ---------- */
 function init() {
   yearEl.textContent = new Date().getFullYear();
   renderProducts();
